@@ -284,6 +284,7 @@ footer {
     
     .content.open {
         padding: 15px;
+        overflow: scroll;
     }
     
     .experience-item h3 {
