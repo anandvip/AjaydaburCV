@@ -124,6 +124,7 @@ header h3 {
     padding: 20px;
     border: 1px solid #e2e8f0;
     border-top: none;
+    overflow: scroll;
 }
 
 /* Experience Items */
