@@ -340,3 +340,91 @@ footer {
         font-size: 14px;
     }
 }
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+        font-size: 12pt;
+    }
+    
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    /* Force all content to be visible when printing */
+    .content {
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;
+        padding: 20px !important;
+        border: none !important;
+        page-break-inside: avoid;
+    }
+    
+    /* Style the section headers for print */
+    .collapsible {
+        background-color: white;
+        color: black;
+        border-bottom: 1px solid #333;
+        border-radius: 0;
+        box-shadow: none;
+        page-break-inside: avoid;
+        font-weight: bold;
+        font-size: 14pt;
+    }
+    
+    /* Hide the expand/collapse indicators */
+    .collapsible:after {
+        display: none;
+    }
+    
+    /* Improve header contrast for printing */
+    header {
+        background-color: white;
+        color: black;
+        border-bottom: 2px solid #333;
+        padding: 20px 0;
+    }
+    
+    header h3 {
+        color: #333;
+    }
+    
+    .contact-item {
+        background-color: white;
+        color: black;
+        border: none;
+    }
+    
+    /* Clean up tables for print */
+    .career-table th {
+        background-color: white;
+        color: black;
+        border: 1px solid #333;
+    }
+    
+    /* Ensure page breaks don't split sections awkwardly */
+    .experience-item, .skill-item {
+        page-break-inside: avoid;
+    }
+    
+    /* Remove background colors */
+    .skill-item {
+        background-color: white;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    /* Make sure lists print properly */
+    ul, ol {
+        page-break-inside: avoid;
+    }
+    
+    /* Hide any unnecessary elements */
+    .btn {
+        display: none;
+    }
+}
